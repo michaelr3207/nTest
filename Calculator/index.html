@@ -1,0 +1,172 @@
+<style>
+
+  body{
+    /*background: linear-gradient(122deg, rgba(52, 34, 22, 0.93), #252525);*/
+    background: linear-gradient(122deg, #111186, blueviolet);
+  }
+  .container{
+
+    background: #131313;
+    border: 5px solid #363535;
+    margin: auto;
+    height: 75%;
+    width: 25%;
+    margin-top: 100px;
+    border-radius: 20px;
+  }
+
+  .answerBox{
+    /*color: #E5E7EB;*/
+    /*border: 3px solid gold;*/
+    height: 25%;
+  }
+
+  .answerBox input{
+    color: #E5E7EB;
+    font-size: 50px;
+    text-align: right;
+    font-family: monospace;
+    background: #131313;
+    margin-top: 180px;
+    margin-left: 25px;
+    width: 90%;
+  }
+  .btnRow1{
+    /*border: 3px solid deeppink;*/
+    height: 13.5%;
+    width: 95%;
+    display: flex;
+    margin: auto;
+  }
+
+  .btnRow1 button{
+    height: 50%;
+    margin: auto;
+    width: 20%;
+    background: #757575;
+    border: 1px solid #757575;
+    border-radius: 40%;
+    font-size: 20px;
+  }
+  .btnRow1 .lastBtn{
+    background: darkorange;
+  }
+
+  .btnRow1 .starter{
+    background: lightgrey;
+  }
+  .btnRow1 .fatBtn{
+    width: 42%;
+    height: 60%;
+    border-radius: 35%;
+  }
+
+  .btnRow1 button:hover{
+    border: 1px solid red;
+  }
+
+  .footer{
+    background: #252525;
+    border-top: 1px solid #a96a13;
+    border-bottom: 1px solid #a96a13;
+    /*border: 3px solid red;*/
+    text-align: center;
+    margin-top: 100px;
+    height: 3%;
+    padding-top: 22px;
+    font-size: 20px;
+    font-family: monospace;
+    color: #E5E7EB;
+    width: 100%;
+  }
+
+  .title{
+    font-size: 75px;
+    font-family: cursive;
+    text-decoration: underline;
+    /*border: 3px solid red;*/
+    margin: auto;
+    text-align: center;
+    height: 6%;
+    width: 33%;
+  }
+
+  input.middle:focus {
+    outline-width: 0;
+  }
+
+  input{
+    outline: none;
+  }
+
+
+
+  @media screen and (min-width: 100px) {
+  input {
+    width: 80%;
+    margin-left: -50px;
+    background: #0048ff;
+  }
+  }
+
+  @media screen and (max-width: 350px) {
+    .title{
+      font-size: 45px;
+    }
+  }
+</style>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="calculator.js"></script>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<div class="title">
+  Simple Calculator
+</div>
+
+<div class="container">
+  <div class="answerBox">
+    <label for="output"></label>
+    <input type="text" id="output" name="ans">
+  </div>
+  <div class="btnRow1">
+    <button onclick="clear1()" class="starter">AC</button>
+    <button onclick="inputNumber1('/')" class="starter">/</button>
+    <button onclick="inputNumber1('%')" class="starter">%</button>
+    <button onclick="inputNumber1('/')" class="lastBtn">/</button>
+  </div>
+  <div class="btnRow1">
+    <button onclick="inputNumber1(7)">7</button>
+    <button onclick="inputNumber1(8)">8</button>
+    <button onclick="inputNumber1(9)">9</button>
+    <button onclick="inputNumber1('X')" class="lastBtn">X</button>
+  </div>
+  <div class="btnRow1">
+    <button onclick="inputNumber1(4)">4</button>
+    <button onclick="inputNumber1(5)">5</button>
+    <button onclick="inputNumber1(6)">6</button>
+    <button onclick="inputNumber1('-')" class="lastBtn">-</button>
+  </div>
+  <div class="btnRow1">
+    <button onclick="inputNumber1(1)">1</button>
+    <button onclick="inputNumber1(2)">2</button>
+    <button onclick="inputNumber1(3)">3</button>
+    <button onclick="inputNumber1('+')" class="lastBtn">+</button>
+  </div>
+  <div class="btnRow1">
+    <button onclick="inputNumber1(0)" class="fatBtn">0</button>
+    <button onclick="inputNumber1('.')">.</button>
+    <button onclick="generateNumbers()" class="lastBtn">=</button>
+  </div>
+</div>
+<div class="footer">
+  Copyright Michael Robinson
+</div>
+</body>
+</html>
