@@ -3,6 +3,7 @@ console.log('testtsstst');
 
 // this is a test comment
 // this is a nother test commit
+//this is a third commit
 
 function inputNumber1(number){
     const output = document.getElementById("output");
